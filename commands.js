@@ -44,6 +44,21 @@ const CHALLENGE_COMMAND = {
   contexts: [0, 2],
 };
 
-const ALL_COMMANDS = [TEST_COMMAND, CHALLENGE_COMMAND];
+const PREGUNTA_COMMAND = {
+  name: 'pregunta',
+  description: 'Haz una pregunta y obtén una respuesta',
+  options: [
+    {
+      type: 3, // Tipo de entrada: STRING
+      name: 'texto',
+      description: 'Escribe tu pregunta',
+      required: true,
+    },
+  ],
+  type: 1,
+};
+
+
+const ALL_COMMANDS = [TEST_COMMAND, CHALLENGE_COMMAND, PREGUNTA_COMMAND];
 
 InstallGlobalCommands(process.env.APP_ID, ALL_COMMANDS);
